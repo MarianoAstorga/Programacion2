@@ -1,0 +1,27 @@
+# Java
+*.class
+*.log
+hs_err_pid*
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+**/build/
+**/dist/
+
+# IntelliJ / VSCode (por si abrís con otros IDEs)
+.idea/
+*.iml
+out/
+.vscode/
+
+# Archivos empaquetados
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

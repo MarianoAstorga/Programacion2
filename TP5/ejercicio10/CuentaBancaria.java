@@ -1,15 +1,17 @@
 package TP5.ejercicio10;
 
+import java.time.LocalDateTime;
+
 public class CuentaBancaria {
     private String cbu;
     private double saldo;
     private ClaveSeguridad claveSeguridad;
-    private Titular titular;
+    private Titular titular;              
 
-    public CuentaBancaria(String cbu, double saldo, ClaveSeguridad claveSeguridad) {
+    public CuentaBancaria(String cbu, double saldo, String codigoClave) {
         this.cbu = cbu;
         this.saldo = saldo;
-        this.claveSeguridad = claveSeguridad;
+        this.claveSeguridad = new ClaveSeguridad(codigoClave, LocalDateTime.now()); 
     }
 
     public void asignarTitular(Titular titular) {

@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class Pasaporte {
     private String numero;
     private LocalDate fechaEmision;
-    private Foto foto;
-    private Titular titular;
-
-    public Pasaporte(String numero, LocalDate fechaEmision, Foto foto) {
+    private Foto foto;          
+    private Titular titular;    
+    
+    public Pasaporte(String numero, LocalDate fechaEmision, String imagen, String formato) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
-        this.foto = foto;
+        this.foto = new Foto(imagen, formato);  
     }
 
     public void asignarTitular(Titular titular) {
@@ -26,7 +26,6 @@ public class Pasaporte {
     public void setFechaEmision(LocalDate fechaEmision) { this.fechaEmision = fechaEmision; }
 
     public Foto getFoto() { return foto; }
-    public void setFoto(Foto foto) { this.foto = foto; }
 
     public Titular getTitular() { return titular; }
     public void setTitular(Titular titular) { this.titular = titular; }

@@ -3,13 +3,13 @@ package TP5.ejercicio05;
 public class Computadora {
     private String marca;
     private String numeroSerie;
-    private PlacaMadre placaMadre;
-    private Propietario propietario;
+    private PlacaMadre placaMadre;   
+    private Propietario propietario; 
 
-    public Computadora(String marca, String numeroSerie, PlacaMadre placaMadre) {
+    public Computadora(String marca, String numeroSerie, String modeloPlaca, String chipsetPlaca) {
         this.marca = marca;
         this.numeroSerie = numeroSerie;
-        this.placaMadre = placaMadre;
+        this.placaMadre = new PlacaMadre(modeloPlaca, chipsetPlaca); 
     }
 
     public void asignarPropietario(Propietario propietario) {
@@ -24,7 +24,7 @@ public class Computadora {
     public void setNumeroSerie(String numeroSerie) { this.numeroSerie = numeroSerie; }
 
     public PlacaMadre getPlacaMadre() { return placaMadre; }
-    public void setPlacaMadre(PlacaMadre placaMadre) { this.placaMadre = placaMadre; }
+
 
     public Propietario getPropietario() { return propietario; }
 }

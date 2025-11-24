@@ -1,14 +1,19 @@
 package TP5.ejercicio08;
 
+import java.time.LocalDate;
+
 public class Documento {
     private String titulo;
     private String contenido;
-    private FirmaDigital firmaDigital;
+    private FirmaDigital firmaDigital; 
 
-    public Documento(String titulo, String contenido, FirmaDigital firmaDigital) {
+    public Documento(String titulo, String contenido,
+                     String codigoHash, LocalDate fechaFirma, Usuario usuario) {
+
         this.titulo = titulo;
         this.contenido = contenido;
-        this.firmaDigital = firmaDigital;
+
+        this.firmaDigital = new FirmaDigital(codigoHash, fechaFirma, usuario);
     }
 
     public String getTitulo() { return titulo; }
